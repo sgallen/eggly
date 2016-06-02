@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -9,13 +9,18 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="assets/css/eggly.css">
-        <link rel="stylesheet" href="assets/css/animations.css"> 
+        <link rel="stylesheet" href="assets/css/animations.css">
     </head>
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3 col-md-2 sidebar" ui-view="categories"></div>
-                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view="bookmarks"></div>
+                <div class="col-sm-3 col-md-2 sidebar" ui-view="categories">
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view="bookmarks">
+                    <div ng-init="hello='world'">
+                        <h1>{{ hello }}</h1>
+                    </div>
+                </div>
             </div>
         </div>
 
